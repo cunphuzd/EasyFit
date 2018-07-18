@@ -1,0 +1,253 @@
+/* .navbar-nav {
+    z-index: 1050;
+} */
+
+/* .navbar {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 12px 1px;
+} */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navbar .sidebar-btn span{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: rgba( 255, 255, 255, 1);
+    margin: 6px;
+    margin-right: 20px;
+}
+
+#sidebar {
+    height: 100%;
+    /* margin-top: 56px; */
+    padding-right: 0px;
+    padding-top: 56px;
+    position: fixed;
+    width: 200px;
+    background-color: rgb(0, 0, 0, .5);
+    overflow: auto;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(245, 245, 245);
+    border-image: initial;
+    z-index: 4;
+    left: -200px;
+    transition: all 250ms;
+}
+
+#sidebar.active {
+    left: 0px;
+}
+
+.rounded-circle {
+    width: 200px;
+    height: 200px;
+}
+
+.list-group-item {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    margin-bottom: 0;
+    background-color: transparent;
+    color: white;
+    border: 0px;
+}
+
+#splash {
+    /* width: 100vw; */
+    height: 100vh;
+    background-image: url(img/header.jpg);
+    background-size: cover;
+    background-position: center right;
+    z-index: 1;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+#splash .splash-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .7);
+    z-index: 2;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 3;
+}
+
+.main-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 56px;
+    height: 55vh;
+    width: 85vw;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(245, 245, 245);
+    margin-left: 15vw;
+}
+
+#today {
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(245, 245, 245);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/HIIT-background.jpg);
+    background-size: cover;
+    background-position: center right;
+}
+
+#today .today-overlay {
+    background: rgb(0, 0, 0, 1);
+    position: absolute;
+    z-index: 5;
+}
+
+#today .today-overlay:hover {
+    background: rgb(0, 0, 0, 0);
+}
+
+.main-bottom {
+    display: flex;
+    flex-direction: row;
+    height: 35vh;
+    width: 85vw;    
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(245, 245, 245);
+    margin-left: 15vw;
+}
+
+.main-bottom-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(245, 245, 245);
+}
+
+#yesterday {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    background-image: url(img/biking-background.jpg);
+    background-size: cover;
+    background-position: center right;
+}
+
+#yesterday .yesterday-overlay {
+    background: rgb(0, 0, 0, 1);
+}
+
+#yesterday .yesterday-overlay:hover {
+    background: rgb(0, 0, 0, 0);
+}
+
+.main-bottom-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(245, 245, 245);
+}
+
+#tomorrow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    background-image: url(img/running-background.jpg);
+    background-size: cover;
+    background-position: center right;
+}
+
+#tomorrow .tomorrow-overlay {
+    background: rgb(0, 0, 0, 0);
+}
+
+#tomorrow .tomorrow-overlay:hover {
+    background: rgb(0, 0, 0, 0);
+}
+
+button {
+    /* margin-top: 40%; */
+    background-color: white;
+    text-transform: uppercase;
+    border-radius: 20px;
+    color: black;
+    padding: 10px 40px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 3;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    align-items: center;
+    margin-left: auto;
+}
+
+.footer-item {
+    margin-left: 10%
+}
