@@ -6,9 +6,16 @@
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 12px 1px;
 } */
 
+/* GLOBAL */
 * {
     margin: 0px;
     padding: 0px;
+}
+
+/* NAVBAR */
+.logo {
+    /* width: 50px; */
+    height: 56px;
 }
 
 .fixed-top {
@@ -28,203 +35,60 @@
     margin-right: 20px;
 }
 
+/* SIDEBAR */
 #sidebar {
     height: 100%;
     /* margin-top: 56px; */
     padding-right: 0px;
-    padding-top: 56px;
+    padding-top: 80px;
     position: fixed;
-    width: 200px;
-    background-color: rgb(0, 0, 0, .5);
+    width: 300px;
+    background: linear-gradient(rgb(0, 0, 0, 1), rgb(0, 0, 0, .5) 150%);
     overflow: auto;
     border-width: 0px;
     border-style: solid;
     border-color: rgb(245, 245, 245);
     border-image: initial;
     z-index: 4;
-    left: -200px;
-    transition: all 250ms;
+    /* left: -300px;
+    transition: all 250ms; */
 }
 
 #sidebar.active {
     left: 0px;
 }
 
+#profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .rounded-circle {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+}
+
+#profile h6 {
+    color: grey;
+}
+
+.list-group{
+    margin-top: 20px;
 }
 
 .list-group-item {
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
+    padding-left: 25px;
     margin-bottom: 0;
     background-color: transparent;
     color: white;
     border: 0px;
 }
 
-#splash {
-    /* width: 100vw; */
-    height: 100vh;
-    background-image: url(img/header.jpg);
-    background-size: cover;
-    background-position: center right;
-    z-index: 1;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-}
-
-#splash .splash-overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, .7);
-    z-index: 2;
-}
-
-.main {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    z-index: 3;
-}
-
-.main-top {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 56px;
-    height: 55vh;
-    width: 85vw;
-    border-width: 0px;
-    border-style: solid;
-    border-color: rgb(245, 245, 245);
-    margin-left: 15vw;
-}
-
-#today {
-    width: 80%;
-    height: 80%;
-    border-radius: 10px;
-    border-width: 0px;
-    border-style: solid;
-    border-color: rgb(245, 245, 245);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url(img/HIIT-background.jpg);
-    background-size: cover;
-    background-position: center right;
-}
-
-#today .today-overlay {
-    background: rgb(0, 0, 0, 1);
-    position: absolute;
-    z-index: 5;
-}
-
-#today .today-overlay:hover {
-    background: rgb(0, 0, 0, 0);
-}
-
-.main-bottom {
-    display: flex;
-    flex-direction: row;
-    height: 35vh;
-    width: 85vw;    
-    border-width: 0px;
-    border-style: solid;
-    border-color: rgb(245, 245, 245);
-    margin-left: 15vw;
-}
-
-.main-bottom-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    border-width: 0px;
-    border-style: solid;
-    border-color: rgb(245, 245, 245);
-}
-
-#yesterday {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 80%;
-    border-width: 0px;
-    border-style: solid;
-    border-color: rgb(245, 245, 245);
-    border-radius: 10px;
-    background-image: url(img/biking-background.jpg);
-    background-size: cover;
-    background-position: center right;
-}
-
-#yesterday .yesterday-overlay {
-    background: rgb(0, 0, 0, 1);
-}
-
-#yesterday .yesterday-overlay:hover {
-    background: rgb(0, 0, 0, 0);
-}
-
-.main-bottom-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    border-width: 0px;
-    border-style: solid;
-    border-color: rgb(245, 245, 245);
-}
-
-#tomorrow {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 80%;
-    border-width: 0px;
-    border-style: solid;
-    border-color: rgb(245, 245, 245);
-    border-radius: 10px;
-    background-image: url(img/running-background.jpg);
-    background-size: cover;
-    background-position: center right;
-}
-
-#tomorrow .tomorrow-overlay {
-    background: rgb(0, 0, 0, 0);
-}
-
-#tomorrow .tomorrow-overlay:hover {
-    background: rgb(0, 0, 0, 0);
-}
-
-button {
-    /* margin-top: 40%; */
-    background-color: white;
-    text-transform: uppercase;
-    border-radius: 20px;
-    color: black;
-    padding: 10px 40px;
-}
-
+/* FOOTER */
 .footer {
     position: fixed;
     bottom: 0;
@@ -250,4 +114,268 @@ ul {
 
 .footer-item {
     margin-left: 10%
+}
+
+/* BASE HOME */
+button {
+    /* margin-top: 40%; */
+    background-color: white;
+    text-transform: uppercase;
+    border-radius: 20px;
+    color: black;
+    padding: 10px 40px;
+}
+
+/* HOME */
+#home-splash {
+    /* width: 100vw; */
+    height: 100vh;
+    background-image: url(img/cover.jpg);
+    background-size: cover;
+    background-position: center right;
+    z-index: 1;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+#home-splash .home-splash-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* background: rgba(0, 0, 0, .7); */
+    z-index: 2;
+}
+
+#home-splash .main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 3;
+    margin-left: 300px;
+}
+
+#home-splash .main-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 56px;
+    height: 55vh;
+    width: 80vw;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(245, 245, 245);
+}
+
+#today {
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(245, 245, 245);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(245, 162, 46, 0.85), rgba(228, 209, 105, .85) 100%);
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    /* background-image: url(img/HIIT-background.jpg);
+    background-size: cover;
+    background-position: center right; */
+}
+
+#today .today-overlay {
+    background: rgb(0, 0, 0, 1);
+    position: absolute;
+    z-index: 5;
+}
+
+#today .today-overlay:hover {
+    background: rgb(0, 0, 0, 0);
+}
+
+#home-splash .main span {
+    display: block;
+    width: 300px;
+    height: 3px;
+    background: rgba( 255, 255, 255, 1);
+    margin-bottom: 50px;
+    /* margin-right: 20px; */
+
+}
+
+#home-splash .main-bottom {
+    display: flex;
+    flex-direction: row;
+    height: 35vh;
+    width: 80vw;    
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(245, 245, 245);
+}
+
+#home-splash .main-bottom-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(245, 245, 245);
+}
+
+#tomorrow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(228, 209, 105, .9) 100%);
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    /* background-image: url(img/biking-background.jpg);
+    background-size: cover;
+    background-position: center right; */
+}
+
+/* #tomorrow .tomorrow-overlay {
+    background: rgb(0, 0, 0, 1);
+}
+
+#tomorrow .tomorrow-overlay:hover {
+    background: rgb(0, 0, 0, 0);
+} */
+
+#home-splash .main-bottom-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(245, 245, 245);
+}
+
+#the-next-day {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(228, 209, 105, .9) 100%);
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    /* background-image: url(img/running-background.jpg);
+    background-size: cover;
+    background-position: center right; */
+}
+
+/* #the-next-day .the-next-day-overlay {
+    background: rgb(0, 0, 0, 0);
+}
+
+#the-next-day .the-next-day-overlay:hover {
+    background: rgb(0, 0, 0, 0);
+} */
+
+/* PROGRAM */
+#program-splash {
+    /* width: 100vw; */
+    height: 100vh;
+    background-image: url(img/workout.jpg);
+    background-size: cover;
+    background-position: center right;
+    z-index: 1;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+#program-splash .program-splash-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* background: rgba(0, 0, 0, .7); */
+    z-index: 2;
+}
+
+#program-splash .main {
+    padding-top: 56px;
+    margin-left: 300px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+#program-splash .main {
+    text-shadow: 1px 1px 2px black;
+}
+
+.programs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 1500;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(245, 245, 245);
+    margin-left: 0px;
+}
+
+.program {
+    height: 300px;
+    width: 300px;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(245, 245, 245);
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#program-splash .improve-performance {
+    background-image: url(img/running2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#program-splash .weight-loss {
+    background-image: url(img/weightloss.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#program-splash .muscle-building {
+    background-image: url(img/muscle.jpg);
+    background-size: cover;
+    background-position: center;
 }

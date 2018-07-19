@@ -8,19 +8,19 @@ app.set('view engine', 'handlebars');
 app.use(express.static('public'));
 
 app.get('/', function(req, res){
+    res.render('base-home', {layout:"base-main"});
+});
+
+app.get('/home', function(req, res){
     res.render('home');
 });
 
-app.get('/about', function(req, res){
-    res.render('about');
+app.get('/program', function(req, res){
+    res.render('program');
 });
 
-app.get('/signIn', function(req, res){
-    res.render('signIn');
-});
-
-app.get('/otherPage', (req, res) => {
-    res.render('person', {layout:"otherPage"})
+app.get('/test', (req, res) => {
+    res.render('home', {layout:"base-main"})
 })
 
 app.listen(8080);
